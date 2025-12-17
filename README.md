@@ -1,8 +1,8 @@
 # Enterprise Hybrid Identity Infrastructure
 
-## The Merchandise Vault - Microsoft Entra ID Implementation
+## Novatech solutions - Microsoft Entra ID Implementation
 
-A complete hybrid identity solution for a fictional 100-employee retail enterprise with offices in New York, London, and Singapore. This project demonstrates real-world implementation of Microsoft Entra ID (formerly Azure AD) identity management aligned with NIST security frameworks.
+A complete hybrid identity solution for a fictional 30-employee retail enterprise with offices in New York, London, and Singapore. This project demonstrates real-world implementation of Microsoft Entra ID, identity management aligned with NIST security frameworks.
 
 ---
 
@@ -10,7 +10,7 @@ A complete hybrid identity solution for a fictional 100-employee retail enterpri
 
 This project simulates an enterprise identity infrastructure deployment, covering the full spectrum of hybrid identity management from on-premises Active Directory through cloud synchronization and external collaboration.
 
-**Scenario:** The Merchandise Vault is expanding globally and needs a unified identity platform that enables secure access to cloud resources while maintaining their existing Active Directory investment.
+**Scenario:** Novatech Solutions is expanding globally and needs a unified identity platform that enables secure access to cloud resources while maintaining their existing Active Directory investment.
 
 ### Business Requirements Addressed
 
