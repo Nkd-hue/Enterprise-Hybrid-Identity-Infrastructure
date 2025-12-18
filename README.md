@@ -68,7 +68,6 @@ This project simulates an enterprise identity infrastructure deployment, coverin
 | Hybrid Sync | Microsoft Entra Connect | Password hash sync + Seamless SSO |
 | Pilot Sync | Microsoft Entra Cloud Sync | Lightweight agent-based synchronization |
 | Monitoring | Entra Connect Health | Sync monitoring and alerting |
-| Automation | PowerShell + Microsoft Graph | Bulk operations and reporting |
 
 ---
 
@@ -105,12 +104,20 @@ This project simulates an enterprise identity infrastructure deployment, coverin
 
 ## Screenshots
 ### Active Directory On-prem Organizational unit Structure
-<img width="1024" height="768" alt="VirtualBox_DC01-NYC_12_12_2025_12_32_57" src="https://github.com/user-attachments/assets/82cb716e-58f7-4d53-a829-4413356879bf" />### Tenant Configuration
+<img width="1024" height="768" alt="VirtualBox_DC01-NYC_12_12_2025_12_32_57" src="https://github.com/user-attachments/assets/82cb716e-58f7-4d53-a829-4413356879bf" />
+
+### Tenant Configuration
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/17002a71-b026-44ce-837c-1375f7305930" />
+Overview of tenant
+
+---
 
 #### Company Branding
 <img width="1710" height="1107" alt="Screenshot 2025-12-16 at 3 12 59 PM" src="https://github.com/user-attachments/assets/7b63862f-e786-4a75-b963-4ad59480a7af" />
 
 *Custom sign-in page with The Merchandise Vault branding*
+
+---
 
 #### Custom Domain Verification
 <img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/cfe0ff00-32e2-44ab-b60d-61e4546898bc" />
@@ -125,6 +132,8 @@ This project simulates an enterprise identity infrastructure deployment, coverin
 <img width="1710" height="1107" alt="Screenshot 2025-12-15 at 8 56 31 PM" src="https://github.com/user-attachments/assets/bdc5457f-a813-4c66-bf1e-dcfb86507956" />
 
 *Geographic administrative units for delegated management*
+
+---
 
 #### Custom Roles
 <img width="1710" height="1107" alt="Screenshot 2025-12-17 at 4 14 22 PM" src="https://github.com/user-attachments/assets/2df6819e-1cca-4705-a216-f87fe74f439b" />
@@ -253,8 +262,7 @@ Aspiring Identity and Access Management Professional
 - Active Security Clearance
 - CompTIA A+ | CompTIA Network+
 
-[LinkedIn](www.linkedin.com/in/nadia-kroduah) | [Email](nadiakrodua20@gmail.com)
-
+[LinkedIn](www.linkedin.com/in/nadia-kroduah) 
 ---
 
 ## License
@@ -263,4 +271,4 @@ This project is for educational and portfolio demonstration purposes. Scripts an
 
 ---
 
-*Last Updated: [December 2025*
+*Last Updated: [December 2025]
