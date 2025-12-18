@@ -30,7 +30,7 @@ This project simulates an enterprise identity infrastructure deployment, coverin
 │                      MICROSOFT ENTRA ID                            │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                │
 │  │ AU-NewYork  │  │ AU-London   │  │AU-Singapore │                │
-│  │  50 users   │  │  30 users   │  │  20 users   │                │
+│  │  15 users   │  │  8 users   │  │  7 users   │                │
 │  └─────────────┘  └─────────────┘  └─────────────┘                │
 │                                                                    │
 │  Custom Roles: HelpDesk T1 | HelpDesk T2 | Security Analyst       │
@@ -103,50 +103,18 @@ This project simulates an enterprise identity infrastructure deployment, coverin
 
 ---
 
-## Repository Structure
-
-```
-├── README.md
-├── docs/
-│   ├── implementation-guide.md      # Step-by-step deployment guide
-│   ├── design-decisions.md          # Architecture rationale + NIST alignment
-│   └── troubleshooting-runbook.md   # Common issues and resolutions
-├── scripts/
-│   ├── environment-setup/
-│   │   ├── Install-ADForest.ps1     # AD DS deployment
-│   │   ├── New-OUStructure.ps1      # Organizational unit creation
-│   │   └── New-SampleUsers.ps1      # Test user population
-│   ├── entra-config/
-│   │   ├── New-CustomRoles.ps1      # Custom role definitions
-│   │   ├── New-AdminUnits.ps1       # Administrative unit setup
-│   │   └── Set-TenantSettings.ps1   # Tenant configuration
-│   ├── automation/
-│   │   ├── New-BulkUsers.ps1        # Bulk user creation from CSV
-│   │   ├── Set-LicensesByDept.ps1   # Automated license assignment
-│   │   └── Get-GroupAudit.ps1       # Group membership audit
-│   └── reports/
-│       ├── Get-LicenseUtilization.ps1
-│       ├── Get-InactiveUsers.ps1
-│       └── Get-EffectivePermissions.ps1
-├── templates/
-│   ├── user-import-template.csv     # CSV template for bulk imports
-│   └── custom-roles.json            # Role definition exports
-└── screenshots/
-    └── [see Screenshots section below]
-```
-
----
-
 ## Screenshots
-
-### Tenant Configuration
+### Active Directory On-prem Organizational unit Structure
+<img width="1024" height="768" alt="VirtualBox_DC01-NYC_12_12_2025_12_32_57" src="https://github.com/user-attachments/assets/82cb716e-58f7-4d53-a829-4413356879bf" />### Tenant Configuration
 
 #### Company Branding
-![Company Branding](screenshots/company-branding.png)
+<img width="1710" height="1107" alt="Screenshot 2025-12-16 at 3 12 59 PM" src="https://github.com/user-attachments/assets/7b63862f-e786-4a75-b963-4ad59480a7af" />
+
 *Custom sign-in page with The Merchandise Vault branding*
 
 #### Custom Domain Verification
-![Custom Domain](screenshots/custom-domain.png)
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/cfe0ff00-32e2-44ab-b60d-61e4546898bc" />
+
 *Verified custom domain configuration*
 
 ---
@@ -154,60 +122,42 @@ This project simulates an enterprise identity infrastructure deployment, coverin
 ### Administrative Structure
 
 #### Administrative Units
-![Administrative Units](screenshots/admin-units.png)
+<img width="1710" height="1107" alt="Screenshot 2025-12-15 at 8 56 31 PM" src="https://github.com/user-attachments/assets/bdc5457f-a813-4c66-bf1e-dcfb86507956" />
+
 *Geographic administrative units for delegated management*
 
 #### Custom Roles
-![Custom Roles](screenshots/custom-roles.png)
+<img width="1710" height="1107" alt="Screenshot 2025-12-17 at 4 14 22 PM" src="https://github.com/user-attachments/assets/2df6819e-1cca-4705-a216-f87fe74f439b" />
+
 *Least-privilege role definitions for Help Desk tiers*
 
 #### Role Assignments
-![Role Assignments](screenshots/role-assignments.png)
-*Scoped role assignments to administrative units*
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/146fb7e9-ffd2-4719-a229-3c2f0f8a0f9f" />
+
 
 ---
 
 ### Hybrid Identity
 
 #### Entra Connect Configuration
-![Entra Connect](screenshots/entra-connect-config.png)
+
+<img width="1710" height="1107" alt="Screenshot 2025-12-17 at 11 09 27 AM" src="https://github.com/user-attachments/assets/c675031f-4800-4e15-9b7f-25b2760f000e" />
+
 *Synchronization configuration with OU filtering*
-
-#### Sync Status Dashboard
-![Sync Status](screenshots/sync-status.png)
-*Microsoft Entra Connect Health monitoring*
-
-#### Seamless SSO Configuration
-![Seamless SSO](screenshots/seamless-sso.png)
-*Kerberos-based single sign-on setup*
 
 ---
 
 ### External Collaboration
 
 #### Cross-Tenant Access Settings
-![Cross-Tenant Access](screenshots/cross-tenant-access.png)
+<img width="1710" height="1107" alt="Screenshot 2025-12-17 at 8 07 54 PM" src="https://github.com/user-attachments/assets/4ef361fa-8230-42a5-ac78-3e5eb1cef2e0" />
+
 *Partner organization trust configuration*
 
 #### External Collaboration Settings
-![External Collab](screenshots/external-collab-settings.png)
+<img width="1710" height="1107" alt="Screenshot 2025-12-17 at 4 43 54 PM" src="https://github.com/user-attachments/assets/eff33ee9-4326-446b-8057-aec6dee205c0" />
+
 *B2B collaboration restrictions and allowed domains*
-
----
-
-### Automation & Reporting
-
-#### PowerShell Bulk Operations
-![Bulk Operations](screenshots/powershell-bulk-ops.png)
-*Automated user creation script execution*
-
-#### License Utilization Report
-![License Report](screenshots/license-report.png)
-*Weekly license utilization dashboard*
-
-#### Connect Health Alerts
-![Health Alerts](screenshots/connect-health-alerts.png)
-*Proactive monitoring and alerting configuration*
 
 ---
 
@@ -260,35 +210,6 @@ Built-in roles are either too broad (User Administrator) or too narrow (Password
 - PowerShell 7.x with Microsoft Graph module
 - Domain registered for custom domain verification
 
-### Quick Start
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/enterprise-hybrid-identity.git
-   ```
-
-2. **Set up on-premises environment**
-   ```powershell
-   # Run from elevated PowerShell on Windows Server
-   .\scripts\environment-setup\Install-ADForest.ps1
-   .\scripts\environment-setup\New-OUStructure.ps1
-   .\scripts\environment-setup\New-SampleUsers.ps1
-   ```
-
-3. **Configure Entra ID tenant**
-   ```powershell
-   # Connect to Microsoft Graph
-   Connect-MgGraph -Scopes "Directory.ReadWrite.All"
-   
-   .\scripts\entra-config\Set-TenantSettings.ps1
-   .\scripts\entra-config\New-AdminUnits.ps1
-   .\scripts\entra-config\New-CustomRoles.ps1
-   ```
-
-4. **Install Entra Connect**
-   - Download from Microsoft
-   - Follow implementation guide in `/docs/implementation-guide.md`
-
 ---
 
 ## Skills Demonstrated
@@ -297,7 +218,6 @@ This project showcases proficiency in:
 
 - **Microsoft Entra ID** administration and configuration
 - **Hybrid Identity** design and implementation
-- **PowerShell** automation with Microsoft Graph API
 - **Security Architecture** aligned with NIST frameworks
 - **Technical Documentation** for enterprise environments
 - **Troubleshooting** identity synchronization issues
@@ -313,9 +233,6 @@ This project covers objectives from:
   - Implement authentication and access management (25-30%)
   - Plan and implement workload identities (20-25%)
   
-- **AZ-104: Microsoft Azure Administrator**
-  - Manage Azure identities and governance (20-25%)
-
 ---
 
 ## Resources
@@ -323,7 +240,6 @@ This project covers objectives from:
 - [Microsoft Entra Documentation](https://learn.microsoft.com/en-us/entra/)
 - [NIST SP 800-63 Digital Identity Guidelines](https://pages.nist.gov/800-63-3/)
 - [NIST SP 800-207 Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final)
-- [Microsoft Graph PowerShell SDK](https://learn.microsoft.com/en-us/powershell/microsoftgraph/)
 
 ---
 
