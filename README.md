@@ -2,7 +2,7 @@
 
 ## Novatech solutions - Microsoft Entra ID Implementation
 
-A complete hybrid identity solution for a fictional 30-employee retail enterprise with offices in New York, London, and Singapore. This project demonstrates real-world implementation of Microsoft Entra ID, identity management aligned with NIST security frameworks.
+A hybrid identity solution for a fictional 30-employee retail enterprise with offices in New York, London, and Singapore. This project demonstrates real-world implementation of Microsoft Entra ID, identity management aligned with NIST security frameworks.
 
 ---
 
